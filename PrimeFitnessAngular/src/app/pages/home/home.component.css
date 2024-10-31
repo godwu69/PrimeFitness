@@ -1,0 +1,130 @@
+#home-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#home-banner{
+  width: 100%;
+  background-image: url("https://gym-store.axiomthemes.com/wp-content/uploads/2023/10/img-001-copyright.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 800px;
+  position: relative;
+}
+
+.banner-content{
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  width: 200px;
+}
+
+.banner-content h1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.banner-content h1 span:first-child{
+  color: #FFFFFF;
+  font-size: 7.55vw;
+  line-height: 7.09vw;
+}
+
+.banner-content h1 span:last-child{
+  color: transparent;
+  -webkit-text-stroke-color: #FFFFFF;
+  -webkit-text-stroke-width: 2px;
+  font-size: 7.5vw;
+  line-height: 7vw;
+}
+
+#home-content{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px 0;
+}
+
+#home-content .content-text{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-content .content-text h1{
+  color: #FFFFFF;
+  font-size: 4vw;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+#home-content .content-text h4{
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.content-items{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.content-item{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 50px 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  flex: 1 1 300px;
+}
+
+.content-item h2{
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+}
+
+svg, p{
+  transition: all 0.3s ease-in-out;
+}
+
+.content-item p{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  text-align: center;
+}
+
+.content-item:hover{
+  background-color: #FF4857;
+}
+
+.content-item:hover svg{
+  fill: #FFFFFF;
+}
+
+.content-item:hover p{
+  color: #FFFFFF;
+}

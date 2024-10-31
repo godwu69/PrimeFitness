@@ -1,0 +1,11 @@
+<nav>
+  <div [routerLink]="['/']" id="logo">LOGO</div>
+  <ul id="nav-links">
+    <li [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</li>
+    <li [routerLink]="['/services']" routerLinkActive="active">Services</li>
+    <li [routerLink]="['/about']" routerLinkActive="active">About Us</li>
+  </ul>
+  <a [routerLink]="['/login']" id="login-btn"><img width="30" height="30"
+                                                   ngSrc="https://img.icons8.com/fluency-systems-regular/200/FFFFFF/user--v1.png"
+                                                   alt="user--v1"/></a>
+</nav>

@@ -10,7 +10,7 @@ public class Feedback {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int feedbackId;
 
-    private int accountId;
+    private int userId;
 
     private LocalDateTime feedbackDate = LocalDateTime.now();
 
@@ -27,12 +27,12 @@ public class Feedback {
         this.feedbackId = feedbackId;
     }
 
-    public int getAccountId() {
-        return accountId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setAccountId(int accountId) {
-        this.accountId = accountId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public LocalDateTime getFeedbackDate() {
@@ -58,25 +58,4 @@ public class Feedback {
     public void setRating(Integer rating) {
         this.rating = rating;
     }
-
-    @Override
-    public String toString() {
-        return "Feedback{" +
-                "feedbackId=" + feedbackId +
-                ", accountId=" + accountId +
-                ", feedbackDate=" + feedbackDate +
-                ", comments='" + comments + '\'' +
-                ", rating=" + rating +
-                '}';
-    }
-
-    public Feedback(int feedbackId, int accountId, LocalDateTime feedbackDate, String comments, Integer rating) {
-        this.feedbackId = feedbackId;
-        this.accountId = accountId;
-        this.feedbackDate = feedbackDate;
-        this.comments = comments;
-        this.rating = rating;
-    }
-
-    public Feedback() {}
 }

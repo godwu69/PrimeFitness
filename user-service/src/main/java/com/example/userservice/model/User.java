@@ -6,10 +6,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-public class Account {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int accountId;
+    private int userId;
 
     @Column(unique = true, nullable = false)
     private String email;
@@ -53,12 +53,12 @@ public class Account {
         Active, Inactive
     }
 
-    public int getAccountId() {
-        return accountId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setUserId(int accountId) {
-        this.accountId = accountId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getEmail() {
@@ -156,41 +156,4 @@ public class Account {
     public void setStatus(Status status) {
         this.status = status;
     }
-
-    @Override
-    public String toString() {
-        return "Account{" +
-                "accountId=" + accountId +
-                ", email='" + email + '\'' +
-                ", phone='" + phone + '\'' +
-                ", password='" + password + '\'' +
-                ", name='" + name + '\'' +
-                ", gender=" + gender +
-                ", dob=" + dob +
-                ", address='" + address + '\'' +
-                ", role=" + role +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                ", lastCheckedIn=" + lastCheckedIn +
-                ", status=" + status +
-                '}';
-    }
-
-    public Account(int accountId, String email, String phone, String password, String name, Gender gender, LocalDate dob, String address, Role role, LocalDateTime createdAt, LocalDateTime updatedAt, LocalDateTime lastCheckedIn, Status status) {
-        this.accountId = accountId;
-        this.email = email;
-        this.phone = phone;
-        this.password = password;
-        this.name = name;
-        this.gender = gender;
-        this.dob = dob;
-        this.address = address;
-        this.role = role;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-        this.lastCheckedIn = lastCheckedIn;
-        this.status = status;
-    }
-
-    public Account() {}
 }
